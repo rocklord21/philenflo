@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Welcome Email</title>
+  <style>
+    /* Reset */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+    body { margin: 0; padding: 0; background-color: #f4f4f4; }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Georgia, 'Times New Roman', serif;">
+
+  <!-- Outer wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f4f4f4;">
+    <tr>
+      <td align="center" style="padding: 30px 10px;">
+
+        <!-- Email container -->
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; width: 100%; background-color: #ffffff;">
+
+          <!-- ===== HEADER ===== -->
+          <tr>
+            <td style="background-color: #1b2a5e; padding: 36px 40px; text-align: center;">
+              <p style="margin: 0 0 6px 0; font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; font-weight: 400;">
+                {{CITY_STATE}}
+              </p>
+              <p style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #a8b4d8; font-weight: 400;">
+                {{VENUE_ADDRESS}}
+              </p>
+            </td>
+          </tr>
+
+          <!-- ===== BODY CONTENT ===== -->
+          <tr>
+            <td style="padding: 48px 52px 40px 52px;">
+
+              <!-- Event headline -->
+              <h1 style="margin: 0 0 28px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #1b2a5e; line-height: 1.35;">
+                {{EVENT_HEADLINE}}
+              </h1>
+
+              <!-- Greeting -->
+              <p style="margin: 0 0 20px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                Hi {{FIRST_NAME}},
+              </p>
+
+              <!-- Opening paragraph -->
+              <p style="margin: 0 0 20px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                {{INTRO_PARAGRAPH}}
+              </p>
+
+              <!-- Second paragraph -->
+              <p style="margin: 0 0 28px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                {{BODY_PARAGRAPH}}
+              </p>
+
+              <!-- Detail bullet list -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 28px;">
+                <tr>
+                  <td style="padding: 0 0 10px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                    <span style="font-weight: bold; color: #1b2a5e;">{{DETAIL_LABEL_1}}:</span>&nbsp;{{DETAIL_VALUE_1}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0 0 10px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                    <span style="font-weight: bold; color: #1b2a5e;">{{DETAIL_LABEL_2}}:</span>&nbsp;{{DETAIL_VALUE_2}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0 0 10px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                    <span style="font-weight: bold; color: #1b2a5e;">{{DETAIL_LABEL_3}}:</span>&nbsp;{{DETAIL_VALUE_3}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                    <span style="font-weight: bold; color: #1b2a5e;">{{DETAIL_LABEL_4}}:</span>&nbsp;
+                    <a href="{{DETAIL_LINK_URL}}" style="color: #2a6db5; text-decoration: underline;">{{DETAIL_LINK_TEXT}}</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Closing paragraph -->
+              <p style="margin: 0 0 36px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; color: #333333; line-height: 1.7;">
+                {{CLOSING_PARAGRAPH}}
+              </p>
+
+              <!-- CTA Button -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="background-color: #1b2a5e; border-radius: 2px;">
+                    <a href="{{CTA_URL}}"
+                       style="display: inline-block; padding: 16px 40px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; letter-spacing: 2.5px; text-transform: uppercase; color: #ffffff; text-decoration: none;">
+                      {{CTA_TEXT}}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ===== FOOTER ===== -->
+          <tr>
+            <td style="background-color: #f4f4f4; padding: 24px 52px; border-top: 1px solid #e0e0e0; text-align: center;">
+              <p style="margin: 0 0 8px 0; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #888888; line-height: 1.6;">
+                {{COMPANY_NAME}} &bull; {{COMPANY_ADDRESS}}
+              </p>
+              <p style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #888888; line-height: 1.6;">
+                <a href="{{UNSUBSCRIBE_URL}}" style="color: #888888; text-decoration: underline;">Unsubscribe</a>
+                &nbsp;&bull;&nbsp;
+                <a href="{{PRIVACY_URL}}" style="color: #888888; text-decoration: underline;">Privacy Policy</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Email container -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
