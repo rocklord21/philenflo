@@ -78,7 +78,13 @@ Your table should have at minimum:
 
 1. Log in at [https://app.emailverify.io](https://app.emailverify.io)
 2. Go to **Settings → API**
-3. Copy your API key and paste it into the `key` query parameter above
+3. Click the **copy icon** (clipboard) next to your key — never type it manually
+4. Paste it directly into the `key` query parameter in Clay
+
+> **Common cause of 401 "Key not found":** Copy-pasting via keyboard or
+> manually typing the key can introduce look-alike character errors
+> (e.g. capital `I` vs lowercase `l`, or `0` vs `O`). Always use the
+> copy icon in the emailverify.io dashboard to get the exact string.
 
 ---
 
