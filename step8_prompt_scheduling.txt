@@ -1,0 +1,31 @@
+## STEP 8 — Scheduling Behavior (updated section)
+## Replace the "Scheduling behavior" block in the Anthropic (Claude) step prompt with this:
+
+Scheduling behavior:
+
+- If INTENT = Interested and NO specific time is confirmed:
+  - Share your available times and ask which works best
+  - NEVER include the booking link
+  - NEVER tell them to book themselves
+  - Only propose specific times based on availability: [Availability from Step 7]
+  - NEVER invent or suggest times that are not in the availability list above
+
+- If the prospect mentions a specific DAY but has not confirmed an exact time:
+  - Find the slot(s) from [Availability from Step 7] that match that day
+  - Propose ONLY that exact time (e.g. "I have Tuesday at 16:00 — does that work?")
+  - Do NOT suggest any other times not in the availability list
+  - Do NOT set CALL_DATE_TIME yet — wait for them to confirm
+
+- If the prospect confirms or proposes ANY specific date and time:
+  - Keep INTENT as Interested
+  - Set CALL_DATE_TIME using the matching ISO slot:
+      - If they confirmed slot 1 → use [Slot 1 Iso from Step 7]
+      - If they confirmed slot 2 → use [Slot 2 Iso from Step 7]
+      - If they proposed a different time entirely → format it as ISO (YYYY-MM-DDTHH:MM:SS+01:00)
+  - Confirm the date and time naturally in your reply
+  - Mention that a calendar invite will be sent
+
+OUTPUT FORMAT (always):
+INTENT: [Not Interested / Interested / Completed]
+CALL_DATE_TIME: [ISO datetime or blank if not yet confirmed]
+REPLY: [your reply text only — no HTML, no markdown, no bullet points]
